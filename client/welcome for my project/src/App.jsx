@@ -1,20 +1,19 @@
-import { Routes,Route,Link } from "react-router-dom"
-import Product from "./components/Product.jsx"
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Product from "../src/components/Product";
+import Panier from "../src/components/panier";
+import { CartProvider } from "../src/components/CartContext";
 import './App.css'
 
 function App() {
-
   return (
-    <>
-    <nav className="navbar">
-    <Link to="/product">Hello for my page Delicious smell</Link> 
-
-    </nav>
-    <Routes>
-      <Route path="product" element={<Product/>}/>
-    </Routes>
-    </>
-  )
+    <CartProvider>
+      <Routes>
+        <Route path="/" element={<Product />} />
+        <Route path="/panier" element={<Panier />} />
+      </Routes>
+    </CartProvider>
+  );
 }
 
-export default App
+export default App;
