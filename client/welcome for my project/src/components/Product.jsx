@@ -8,8 +8,8 @@ const [name,setName]=useState("")
 const [price,setPrice]=useState("")
 const [category,setCategory]=useState("")
 const [image,setImage]=useState("")
-
-
+const [searchTerm,setSearchTerm]=useState("")
+  const [filteredData, setFilteredData] = useState([]);
 
 let pro={
     name:name,
@@ -67,8 +67,28 @@ fetch()
 .catch((err)=>console.log(err))
 }
 
+
+// const handleSearch=()=>{
+//     console.log("searchTerm",searchTerm);
+//     const results=data.filter((el)=>
+//         ((el.name).toLowerCase())===(searchTerm.toLowerCase())
+//     )
+//     console.log("result",results);
+//     setFilteredData(results)
+// }
+
+
   return (
-    <div>
+    
+    <div className="cover-image">
+      <main className="product-container">
+        <h2>Our Products</h2>
+        
+<p>Welcome to our products page. Here you will find the finest products with the best scents.</p>
+<button>Shop Now</button>
+      </main>
+
+        
 <h2>ADD PRODUCT</h2>
 <input
 type='text'
@@ -100,11 +120,19 @@ onChange={(e)=>setImage(e.target.value)}
 />
 <button onClick={()=>addPro(pro)}>ADD Product</button>
 
+{/* <input
+type='text'
+placeholder='Search by name...'
+// onChange={(e)=>setSearchTerm(e.target.value)}
+value={searchTerm}
+/> */}
+{/* <button onClick={handleSearch}>setSearch</button> */}
 
-
-
-  {data.map(el=>(
-    <li>
+<ul>
+ 
+ {data.map(el=>(
+    
+    <li key={el.id}>
         <p>{el.name}</p>
          <p>{el.price}</p>
          <p>{el.category}</p>
@@ -151,7 +179,9 @@ onChange={(e)=>setImage(e.target.value)}
 <button onClick={()=>updatePro(el.id,pro)}>update</button>
 
     </li>
-  ))}    
+  ))}   
+</ul> 
+ 
     </div>
   )
 }

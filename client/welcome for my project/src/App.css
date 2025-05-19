@@ -1,42 +1,107 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.navbar {
+  background-color: #4a90e2;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navbar a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cover-image {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') no-repeat center center/cover;
+  border-radius: 12px;
+  padding: 50px 30px;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cover-image h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
 }
 
-.card {
-  padding: 2em;
+.cover-image p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
-.read-the-docs {
-  color: #888;
+.cover-image button {
+  background-color: #e94e77;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+.cover-image button:hover {
+  background-color: #d03f68;
+}
+
+.product-container {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+.product-container h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"] {
+  margin-bottom: 10px;
+}
+
+ul li {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul li img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(74,144,226,0.2);
+  flex-shrink: 0;
+}
+
+ul li p {
+  flex: 1 1 150px;
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+ul li button {
+  background-color: #e94e77;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+ul li button:hover {
+  background-color: #c43762;
+}
+
+ul li input {
+  width: 140px;
+  margin: 5px 10px 5px 0;
 }
